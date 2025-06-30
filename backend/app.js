@@ -15,7 +15,10 @@ const app = express();
 
 //  Connect to DB at startup
 conn();
-const allowedOrigins = ['https://blogvista-frontend.onrender.com'];
+const allowedOrigins = [
+  'https://blogvista-frontend.onrender.com',
+  'http://localhost:5000' // Optional: for development testing
+];
 
 app.use(cors({
   origin: function (origin, callback) {
