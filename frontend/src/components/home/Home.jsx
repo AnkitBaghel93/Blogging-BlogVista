@@ -14,7 +14,7 @@ const HomePage = () => {
     const fetchBlogs = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/blogs", {
+        const res = await axios.get("https://blogvista-backend-vac5.onrender.com/api/blogs", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBlogs(res.data);
@@ -29,7 +29,7 @@ const HomePage = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+      await axios.delete(`https://blogvista-backend-vac5.onrender.com/api/blogs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
