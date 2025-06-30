@@ -16,7 +16,7 @@ const SignIn = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/signin", formData);
+      const res = await axios.post("https://blogvista-backend-vac5.onrender.com/api/signin", formData);
       const { token, user } = res.data;
 
       localStorage.setItem("token", token);
