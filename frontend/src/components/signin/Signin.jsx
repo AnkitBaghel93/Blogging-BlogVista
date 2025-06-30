@@ -32,7 +32,7 @@ const SignIn = () => {
     <div className="min-h-screen bg-gradient-to-br from-[#dbeafe] via-white to-[#f0f4ff] flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-gray-200 mt-16">
         <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
-          Sign In to <span className="text-gray-800">Truly IAS</span>
+          Sign In to <span className="text-gray-800">BlogVista</span>
         </h2>
 
         {error && (
