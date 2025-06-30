@@ -22,7 +22,7 @@ const SignIn = () => {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
 
-      navigate("/home");
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.msg || "Login failed");
     }
