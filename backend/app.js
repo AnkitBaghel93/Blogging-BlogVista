@@ -15,7 +15,20 @@ const app = express();
 
 //  Connect to DB at startup
 conn();
-app.use(cors());
+const allowedOrigins = ['https://blogvista-frontend.onrender.com'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin like mobile apps or curl
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
 app.use(express.json());
 
 
