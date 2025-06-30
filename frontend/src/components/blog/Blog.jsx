@@ -39,13 +39,13 @@ const CreateBlog = () => {
       let response;
       if (blogId) {
         response = await axios.put(
-          `http://localhost:5000/api/blogs/${blogId}`,
+          `https://blogvista-backend-vac5.onrender.com/api/blogs/${blogId}`,
           blogData,
           config
         );
       } else {
         response = await axios.post(
-          "http://localhost:5000/api/blogs",
+          "https://blogvista-backend-vac5.onrender.com/api/blogs",
           blogData,
           config
         );
